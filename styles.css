@@ -1,108 +1,149 @@
-/* styles.css */
-*{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	background: #5672a3;
-	color: #fff;
-}
-/* To center everything in game */
-.game{
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
-	width: 100vw;
-	justify-content: center;
-	align-items: center;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Title of the game */
-.title{
-	position: absolute;
-	top: 0;
-	font-size: 4rem;
-	z-index: 2;
+body {
+    background: #003193;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-/* Score Board */
-.score{
-	display: flex;
-	width: 30vw;
-	justify-content: space-evenly;
-	position: absolute;
-	top: 70px;
-	z-index: 1;
-}
- h2{
-    padding: 2rem;
- }
-
-/* Score */
-.p-count,.c-count{
-	text-align: center;
-	font-size: 1.5rem;
-	margin-top: 1rem;
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(17, 21, 64, 0.1);
+    background: rgb(0 0 0 / 43%)
 }
 
-/* displaying three buttons in one line */
-.options{
-	display: flex;
-	width: 50vw;
-	justify-content: space-evenly;
-    /* margin:2rem; */
-	margin-top: 2rem;
-
+.title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Styling on all three buttons */
-.rock, .paper, .scissor{
-	padding: 0.8rem;
-	width: 100px;
-	border-radius: 10px;
-	background: green;
-	outline: none;
-	border-color: green;
-	border: none;
-	cursor: pointer;
+.score {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
-.move{
-	font-size: 2rem;
-	font-weight: bold;
-}
-.movesleft{
-    padding:1rem;
+h2 {
+    margin: 0;
 }
 
-/* Reload button style */
+.p-count, .c-count {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.move {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.movesleft {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.rock, .paper, .scissor {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #007bff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.rock:hover, .paper:hover, .scissor:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+
+.chosen-moves {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.chosen-moves > div {
+    text-align: center;
+    width: 50%;
+}
+
 .reload {
-	display: none;
-	margin-top: 2rem;
-	padding: 1rem;
-	background: green;
-	outline: none;
-	border: none;
-	border-radius: 10px;
-	cursor: pointer;
+    display: none;
+    padding: 10px 20px;
+    background: #ffc107;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-size: 1rem;
+    color: #000000;
 }
 
-.result{
-	margin-top: 20px;
-	font-size: 1.2rem;
+.reload:hover {
+    background: #e0a800;
+    transform: scale(1.1);
+}
+
+.result {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: center;
 }
 
 /* Responsive Design */
-@media screen and (max-width: 612px)
-{ 
-	.title{
-		text-align: center;
-	}
-	.score{
-		position: absolute;
-		top: 200px;
-		width: 100vw;
-	}
-	.options{
-		width: 100vw;
-	}
+@media screen and (max-width: 612px) { 
+    .title {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .score {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .options {
+        flex-direction: column;
+    }
+    .rock, .paper, .scissor {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .chosen-moves {
+        flex-direction: column;
+    }
+    .chosen-moves > div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
