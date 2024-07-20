@@ -70,13 +70,13 @@ h2 {
 .rock, .paper, .scissor {
     padding: 10px 20px;
     border-radius: 10px;
-    background: #007bff;
+    background: yellow;
     outline: none;
     border: none;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
     font-size: 1rem;
-    color: #ffffff;
+    color: #400a0a;
 }
 
 .rock:hover, .paper:hover, .scissor:hover {
